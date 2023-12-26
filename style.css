@@ -24,15 +24,16 @@ body {
   position: absolute;
   z-index: 1000;
   /* right: var(--scrollwid); */
-  right: 30;
-  transform: translate(0px, 30%);
+  right: 0;
+  transform: translate(-27px , 25%);
   background-color: #ffffff00;
-  /* position: absolute; */
   padding: 0px 0px;
   border: none;
-
-
+  float: right; 
+  
 }
+
+
 #send-btn:hover{
   background-color: #00000011
 }
@@ -92,7 +93,7 @@ body {
   justify-content: center;
 }
 #chat-box{
-  padding-top: 0px;
+  padding-top: 17px;
 }
 #chat-box .row{
   margin: 0px 30px;
