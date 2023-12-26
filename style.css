@@ -1,0 +1,197 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6a1 ;
+  height: 100vh;
+
+}
+.response{
+  font-size: 20px;
+}
+
+.material-symbols-outlined{font-size: 2em; color: orange;
+    margin: 0px 0px ;
+        }
+.btn-cont{
+  border: 1px solid black;
+  position: absolute;
+  padding: 0px;
+  width: 30px;
+  height: 100%;
+}
+#send-btn{
+  position: absolute;
+  z-index: 1000;
+  /* right: var(--scrollwid); */
+  right: 30;
+  transform: translate(0px, 30%);
+  background-color: #ffffff00;
+  /* position: absolute; */
+  padding: 0px 0px;
+  border: none;
+
+
+}
+#send-btn:hover{
+  background-color: #00000011
+}
+.engine{
+  display: flex;
+}
+.selector{
+  position: absolute;
+  background-color: #FFA50099;
+  width: 99.5px;
+  height: 1.45em;
+  border-radius: 4px;
+  transition: transform 0.5s;
+  transform: translate(0.5px, 0.5px)
+
+}
+.disabled{
+  border-radius: 5px;
+  display: flex;
+  background-color: #ffdc7d;
+    width: 100px;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #00000055;
+  transform: translate(-100%, 0px)
+
+}
+
+.option-text{
+  transform: translate(0px, 38%);
+  z-index: 1000;
+}
+.option-text:hover, .default:hover, .selector:hover{
+  cursor: pointer;
+}
+.gpt:hover {
+  cursor: default;
+}
+.mouse-default:hover{
+  cursor: default;
+}
+.prevent-select{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.option{
+  border-radius: 5px;
+  display: flex;
+  background-color: #ffdc7d;
+  border: 1px solid orange;
+  width: 100px;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+}
+#chat-box{
+  padding-top: 0px;
+}
+#chat-box .row{
+  margin: 0px 30px;
+}
+.load{
+  margin: 0px 0px;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 70px;
+  background-color: lightgray;
+  border-radius: 10px;
+  line-height: 30px;
+
+}
+
+svg{
+  display: block;
+  margin: auto;
+  line-hight: 30px;
+}
+.options{
+  width: calc(100%);
+  /* padding-left: ; */
+  padding-right: var(--scrollwid);
+
+  height:  35px;
+  position: fixed;
+
+}
+.inside{
+  background-color: #ffe6a1;
+  margin:auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: var(--scrollwid);
+  align-items: center;
+  justify-content:center;
+}
+.pad{
+  height: 100vh;
+  padding-bottom: 85px;
+  background-color: #ffe6a1;
+  overflow: hidden;
+}
+#chat-box{overflow-y: scroll;}
+.toolt {
+  position: relative;
+  display: inline-block;
+}
+
+.toolt .tooltiptext {
+
+  visibility: hidden;
+  width: 120px;
+  background-color: #55555599;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.toolt .tooltiptext::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:  transparent transparent #55555599 transparent;
+}
+
+.toolt:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+  .toast{
+    position: absolute;
+    z-index: 10000;
+    top: 5;
+    left: 5;
+    padding: 5px;
+    padding-left: 10px;
+    width: max-content;
+
+  }
+  .miralink{
+    top: 41;
+  }
+  .btn-close{
+    margin-left: 1em;
+    float: right;
+  }
