@@ -1,3 +1,7 @@
+function moveup(){
+$('.miralink').removeClass('miralink')
+}
+
 function due(input) {
     return input.replace(/\\u([0-9a-fA-F]{4})/g, function(match, p1) {
         return String.fromCharCode(parseInt(p1, 16));

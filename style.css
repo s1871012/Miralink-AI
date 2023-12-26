@@ -180,16 +180,17 @@ svg{
 }
   .toast{
     position: absolute;
-    z-index: 10000;
-    top: 5;
-    left: 5;
+    z-index: 50;
+    transform: translate(5px, 5px) ;
     padding: 5px;
     padding-left: 10px;
     width: max-content;
+    transition: transform 0.5s;
 
   }
   .miralink{
-    top: 41;
+  transform: translate(5px, 41px) ;
+    z-index: 100;
   }
   .btn-close{
     margin-left: 1em;
