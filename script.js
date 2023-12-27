@@ -52,11 +52,30 @@ function appendMessage(sender, message) {
       chatBox.removeChild(children[children.length - 1]);
     }
   }
+  function grs(length) {
+      var result           = '';
+      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var charactersLength = characters.length;
+      for ( var i = 0; i < length; i++ ) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return result;
+  }
+  msgId=grs(10)
+  
+  if (sender == 'User'){
+  messageElement.innerHTML = '<div class="row" style="margin-top: 30px;"> <div class="col-md-auto '+ sender.toLowerCase()+'"> <img src="'+imageurl+'" alt=""  style="height: 2.3em;border-radius: 10px; margin-top: 0em;"></div> <div class="col '+ msgId +'" style="padding-top: 0.45em;">'+'</div> </div>'; 
 
-  messageElement.innerHTML = '<div class="row" style="margin-top: 30px;"> <div class="col-md-auto '+ sender.toLowerCase()+'"> <img src="'+imageurl+'" alt=""  style="height: 2.3em;border-radius: 10px; margin-top: 0em;"></div> <div class="col" style="padding-top: 0.45em;">' + message + '</div> </div>'; 
+    chatBox.appendChild(messageElement);
 
 
-  chatBox.appendChild(messageElement);
+  document.querySelector('.' + msgId).textContent = message;}
+
+  else{
+    messageElement.innerHTML = '<div class="row" style="margin-top: 30px;"> <div class="col-md-auto '+ sender.toLowerCase()+'"> <img src="'+imageurl+'" alt=""  style="height: 2.3em;border-radius: 10px; margin-top: 0em;"></div> <div class="col '+ msgId +'" style="padding-top: 0.45em;">'+message+'</div> </div>';
+    chatBox.appendChild(messageElement);
+
+  }
 
     // Scroll to the bottom of the chat box
     chatBox.scrollTop = chatBox.scrollHeight;
