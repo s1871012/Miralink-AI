@@ -69,7 +69,7 @@ function appendMessage(sender, message) {
     chatBox.appendChild(messageElement);
 
 
-  document.querySelector('.' + msgId).textContent = message;}
+  $('.' + msgId).text(message);}
 
   else{
     messageElement.innerHTML = '<div class="row" style="margin-top: 30px;"> <div class="col-md-auto '+ sender.toLowerCase()+'"> <img src="'+imageurl+'" alt=""  style="height: 2.3em;border-radius: 10px; margin-top: 0em;"></div> <div class="col '+ msgId +'" style="padding-top: 0.45em;">'+message+'</div> </div>';
