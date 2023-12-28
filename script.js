@@ -107,8 +107,8 @@ $("#text-input").submit(function (e) {
 
 
   appendMessage("AIL", '<div class="load"> <div class=""> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 90 100" width="50px" > <circle cx="15" cy="15" r="10" fill="#7f7f7f"> <animate attributeName="fill" values="#7f7f7f;#333333;#7f7f7f" dur="2s" keyTimes="0;0.5;1" repeatCount="indefinite" /> </circle> <circle cx="45" cy="15" r="10" fill="#7f7f7f"> <animate attributeName="fill" values="#7f7f7f;#333333;#7f7f7f" dur="2s" keyTimes="0;0.5;1" begin="0.66s" repeatCount="indefinite" /> </circle> <circle cx="75" cy="15" r="10" fill="#7f7f7f"> <animate attributeName="fill" values="#7f7f7f;#333333;#7f7f7f" dur="2s" keyTimes="0;0.5;1" begin="1.32s" repeatCount="indefinite" /> </circle> </svg> </div> </div>')
-
-  message = "Previous Messages: " + prev.join(';\n ') + "Actual Message: " + '\n'  + message;
+if (aimodel == 'bard'){
+  message = "Previous Messages: " + prev.join(';\n ') + "Actual Message: " + '\n'  + message;}
   getResponse(message, aimodel, function (response) {
     prev.push(response);
 
