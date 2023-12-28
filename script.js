@@ -14,7 +14,8 @@ function getResponse(message ,model, callback) {
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
       message: message,
-      model: model
+      model: model,
+      temp: $('.form-range').val()
   }));
 
   xhr.addEventListener("load", function() {

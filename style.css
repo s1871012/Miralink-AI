@@ -10,6 +10,30 @@ body {
   font-size: 20px;
 }
 
+.form-range{
+  width: 15vw;
+  position: absolute;
+  height: 100%;
+  transform: translate(10px, 5px);
+  display: flex;
+  align-items: center;
+  display: none;
+}
+.form-range::before{
+  content: "Creativity:";
+  margin-right: 10px;
+}
+.form-range::-webkit-slider-thumb{
+  background-color: orange;
+}
+.form-range::-webkit-slider-thumb:active{
+  background-color:#ffc14d;
+}
+
+.form-range::-webkit-slider-runnable-track{
+  background-color: #ffcb70;
+}
+
 .material-symbols-outlined{font-size: 2em; color: orange;
     margin: 0px 0px ;
         }
